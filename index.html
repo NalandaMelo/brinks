@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+    <meta charset="UTF-8">
+    <title>Pergunta</title>
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 150px;
+}
+
+    button {
+    padding: 10px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    #sim {
+    background: #4CAF50;
+    color: white;
+}
+
+    #nao {
+    background: #f44336;
+    color: white;
+    position: absolute;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Vamos casar? 👀</h1>
+
+<button id="sim" onclick="respostaSim()">Sim</button>
+<button id="nao" onmouseover="fugir()">Não</button>
+
+<script>
+    function respostaSim() {
+    alert("Sabia que tu ia aceitar hehehe");
+}
+
+    function fugir() {
+    const botao = document.getElementById("nao");
+
+    const x = Math.random() * (window.innerWidth - botao.offsetWidth);
+    const y = Math.random() * (window.innerHeight - botao.offsetHeight);
+
+    botao.style.left = x + "px";
+    botao.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
